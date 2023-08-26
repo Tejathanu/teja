@@ -1,0 +1,150 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+    font-family: "Arial", "Helvetica", sans-serif;
+
+
+}
+html,body{
+    height:100%;
+    width:100%;
+}
+ #cursor{
+    height:15px;
+    width:15px;
+    background-color: #98c507;
+    border-radius: 50%;
+    position: fixed;
+    z-index: 99;
+ }
+ #cursor-blur{
+    height:200px;
+    width:200px;
+    background-color: #98c507;
+    border-radius: 50%;
+    position: fixed;
+    filter: blur(90px);
+   z-index: 99;
+ }
+#nav{
+    height:100px;
+    width:100%;
+     /* background-color:#000;  */
+    display: flex;
+    align-items: center;
+    padding: 0 150px ;
+    gap: 50px;
+    justify-content: flex-start;
+    position: fixed;
+    z-index:99;
+}
+/* h4{ 
+    color: blue;
+ } */
+
+#nav img{
+    height:65px;
+}
+
+video{
+    width: 100%;
+    height: 100%;
+   object-fit: cover;
+   /* z-index: -1; */
+   position: fixed;
+}
+#main{
+    position: relative;
+    background-color: rgb(0 0 0 7);
+}
+#page1{
+    height:100vh;
+    width:100%;
+   position:relative;
+   display:flex;
+   align-items: center;
+   justify-content: center;
+   flex-direction:column;
+   text-align: center;
+   z-index: 10;
+}
+#page1 h1{
+   /* font-family: 'Sofia'; */
+    font-size: 130px;
+    font-weight: 900; 
+    /* color: rgb(243, 4, 159); */
+    position:relative;
+    z-index:99;
+}
+
+#page1 h1::before{
+    content:"EAT.PLAY.SLEEP";
+    position: absolute;
+    color: #a70404;
+    top: -4px;
+    left:-4px;
+    -webkit-text-stroke:#98c507;
+   z-index: -1;
+}
+#page1 h2{
+    font-size: 30px;
+    font-weight: 800;
+    margin-top: 10px;
+    margin-bottom: 20px;                        
+}
+#page1 p{
+    font-size:19px;
+    font-weight: 500;
+  width: 40%;
+}
+
+#page2{
+    height:100vh;
+    width: 100%;
+    z-index: 10;
+}
+
+/* .roll{
+ font-size:200px ;
+} */
+
+#scroller{
+    /* background-color: rgb(219, 151, 151); */
+    white-space:nowrap;
+    /* overflow-x: auto; */
+    /* overflow-y: hidden; */
+}
+#scroller::-webkit-scrollbar{
+    display: none;
+}
+#scroller-in{
+display: inline;
+white-space:nowrap;
+animation-name: scroll;
+animation-duration: 10s;
+animation-timing-function: linear;
+animation-iteration-count: infinite;
+}
+#scroller h4{
+    display: inline;
+    font-size: 140px;
+    font-weight:900;
+    /* font-family: "gilroy"; */
+    margin-right:10px;
+    transition: all linear 0.5s;
+    color:transparent ;
+    -webkit-text-stroke:2px #98c507 ;
+}
+#scroller h4:hover{
+    color:#98c507;
+}
+@keyframes scroll{
+    from{
+        transform: translateX(0);
+    }
+    to{
+        transform: translateX(-100%);
+    }
+    
+}
